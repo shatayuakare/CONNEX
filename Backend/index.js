@@ -14,6 +14,10 @@ app.use(cors())
 const PORT = process.env.PORT || 4000;
 const URI = process.env.MongoDBURI;
 
+
+app.get("/", (req, res) => {
+    res.json("Hello World")
+})
 try {
     // await mongoose.connect(URI, {
     //     useNewUrlParser: true,
