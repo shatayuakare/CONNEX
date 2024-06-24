@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import cors from "cors"
 import userRoute from "./route/User.router.js"
+import serverless from "serverless-http";
 
 const app = express();
 dotenv.config();
@@ -27,7 +28,7 @@ try {
     console.log("Mongo DB Not Connected", error)
 }
 
-
+export const handler = serverless(app);
 // app.use("/try", (req, res) => res.send("Hellow"))
 
 app.use("/auth", userRoute)
