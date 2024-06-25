@@ -1,6 +1,7 @@
 {
     "version": 2,
     "name": "coder-society",
+    "buildCommand": "next build",
     "build": [
         {
             "src": "index.js",
