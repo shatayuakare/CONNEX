@@ -7,8 +7,12 @@
     "express": "^4.19.2",
     "mongodb": "4.0",
     "mongoose": "^8.4.3",
+<<<<<<< HEAD
     "nodemon": "^3.1.4",
     "serverless-http": "^3.2.0"
+=======
+    "nodemon": "^3.1.4"
+>>>>>>> 6ec2727b9faa1ee72f7b970642ef157c52ce3d6d
   },
   "name": "coder-society",
   "type": "module",
