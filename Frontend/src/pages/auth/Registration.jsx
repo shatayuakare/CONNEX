@@ -23,7 +23,7 @@ const Registration = () => {
             password: data.password
         }
 
-        await axios.post("http://localhost:4001/auth/register", userInfo).then((res) => {
+        await axios.post("https://codersocietyserver.onrender.com/auth/register", userInfo).then((res) => {
             if (res.data) {
                 toast.success("User Registered Successfully")
             }
