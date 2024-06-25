@@ -19,6 +19,7 @@ const Login = () => {
             email: data.email,
             password: data.password
         }
+<<<<<<< HEAD
         await axios.post("https://codersocietyserver.onrender.com/auth/login",
             userInfo).then((res) => {
                 // console.log(res.data)
@@ -34,6 +35,22 @@ const Login = () => {
                     // console.log(err.response.data.message)
                 }
             })
+=======
+        await axios.post("https://codersocietyserver.onrender.com/auth/login", userInfo).then((res) => {
+            // console.log(res.data)
+            if (res.data) {
+                toast.success("Login Successfully")
+                // alert("Login Succeessfully")
+            }
+            localStorage.setItem("User", JSON.stringify(res.data.user))
+            window.location.reload();
+        }).catch((err) => {
+            if (err.response) {
+                toast.error(err.response.data.message)
+                // console.log(err.response.data.message)
+            }
+        })
+>>>>>>> 86175ac7304ad9dd28d1be2cd3907b5241e320bb
     };
 
     return (
