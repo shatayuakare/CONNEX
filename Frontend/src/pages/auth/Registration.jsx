@@ -23,14 +23,15 @@ const Registration = () => {
             password: data.password
         }
 
-        await axios.post("https://codersocietyserver.onrender.com/auth/register", userInfo).then((res) => {
-            if (res.data) {
-                toast.success("User Registered Successfully")
-            }
-            localStorage.setItem("User", JSON.stringify(res.data.user))
-        }).catch((err) => {
-            toast.error(err.response.data.message)
-        })
+        await axios.post("https://codersocietyserver.onrender.com/auth/register",
+            userInfo).then((res) => {
+                if (res.data) {
+                    toast.success("User Registered Successfully")
+                }
+                localStorage.setItem("User", JSON.stringify(res.data.user))
+            }).catch((err) => {
+                toast.error(err.response.data.message)
+            })
         window.location.reload();
     };
 
