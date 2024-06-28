@@ -20,34 +20,16 @@ const Login = () => {
             password: data.password
         }
 
-        await axios.post("https://codersocietyserver.onrender.com/auth/login",
-            userInfo).then((res) => {
-                // console.log(res.data)
-                if (res.data) {
-                    toast.success("Login Successfully")
-                    // alert("Login Succeessfully")
-                }
-                localStorage.setItem("User", JSON.stringify(res.data.user))
-                window.location.reload();
-            }).catch((err) => {
-                if (err.response) {
-                    toast.error(err.response.data.message)
-                    // console.log(err.response.data.message)
-                }
-            })
-
         await axios.post("https://codersocietyserver.onrender.com/auth/login", userInfo).then((res) => {
             // console.log(res.data)
             if (res.data) {
-                toast.success("Login Successfully")
-                // alert("Login Succeessfully")
+                toast.success("Login Successfully");
             }
             localStorage.setItem("User", JSON.stringify(res.data.user))
             window.location.reload();
         }).catch((err) => {
             if (err.response) {
                 toast.error(err.response.data.message)
-                // console.log(err.response.data.message)
             }
         })
     };
@@ -55,9 +37,9 @@ const Login = () => {
     return (
         <>
             <PageHead title="Login" msg={"Login form"} />
-            <section className="container content-center p-1" id="login">
+            <section className="content-center p-1 bg-gray-100" id="login">
 
-                <div className="shadow-md p-4 pt-8 sm-w-full md:w-6/12 mx-auto bg-white rounded-lg" action="" >
+                <div className="shadow md:p-4 sm:p-2 pt-8 sm-w-full md:w-6/12 mx-auto bg-white rounded-2xl" action="" >
                     <h4 className="text-center text-3xl p-3 pb-0 font-bold">
                         Already A Member? Sign In
                     </h4>
@@ -77,7 +59,7 @@ const Login = () => {
 
                         <label htmlFor="password">Password</label>
                         <div className="inputt input-bordered flex items-center ">
-                            <input className="w-full p-0.1 m-0" type={type} id="password"
+                            <input className="w-full m-0" type={type} id="password"
                                 placeholder="🗝️ Passsword..."
                                 {...register("password", {
                                     required: "Password is required field",

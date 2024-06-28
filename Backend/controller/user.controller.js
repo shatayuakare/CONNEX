@@ -49,10 +49,10 @@ export const login = async (req, res) => {
 
         const isMatch = bcryptjs.compare(password, user.password)
         if (!user || !isMatch) {
-            return res.status(400).json({ message: "Username of Pasword invalid" })
+            return res.status(400).json({ message: "Username of Password invalid" })
         } else {
             return res.status(200).json({
-                message: "User Loged In Successfully",
+                message: "User Log In Successfully",
                 user: {
                     username: user.username,
                     name: user.name,

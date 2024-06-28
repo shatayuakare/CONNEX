@@ -18,5 +18,9 @@
     {
         "path": "/doubt",
         "name": "Doubt"
+    },
+    {
+        "path": "/dashboard",
+        "name": "Dashboard"
     }
 ]

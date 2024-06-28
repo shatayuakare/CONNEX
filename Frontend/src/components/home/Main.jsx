@@ -3,12 +3,11 @@ import { Link } from "react-router-dom"
 
 const Main = () => {
     return (
-        <section className="bg-gradient-to-r from-green-50 to-blue-50 p-0" id="home-main">
-            <div className="md:grid md:grid-cols-2 gap-0 sm-container-full  md:container">
+        <section className="bg-gradient-to-r from-blue-200 to-orange-100 p-0" id="home-main">
+            <div className="md:grid md:grid-cols-2 gap-0 md:mx-16 mt-6">
                 <div className="home-content content-center p-4 sm:order-first">
-
                     <h2 className="home-head font-extrabold text-gray-700">
-                        Better <span className="text-indigo-500 underline drop-shadow-md">Learning Future</span> Starts With Penn
+                        Better <span className="text-blue-700 underline drop-shadow-md">Learning Future</span> Starts With Connex
                     </h2>
                     <p className="my-4">
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo optio perferendis quam architecto excepturi facilis molestias natus? Earum,

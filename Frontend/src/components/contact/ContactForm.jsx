@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form"
+import toast from "react-hot-toast"
 
 
 const ContactForm = () => {
@@ -7,13 +8,19 @@ const ContactForm = () => {
         handleSubmit,
         formState: { errors },
     } = useForm()
-    const onSubmit = (data) => console.log(data)
+    const onSubmit = (data) => {
+        toast.success("Send Message");
+        console.log(data)
+        setInterval(() => {
+            window.location.reload()
+        }, 3000);
+    }
 
     return (
-        <div className="p-5 bg-white shadow-md my-6">
+        <div className="p-5 bg-white shadow-md ">
 
             <h5 className="text-center text-5xl text-slate-600 font-bold my-4">Send Your Message</h5>
-            <form className="container" action="" onSubmit={handleSubmit(onSubmit)}>
+            <form className="md:w-1/2 mx-auto" action="" onSubmit={handleSubmit(onSubmit)}>
 
                 <div className="grid sm:grid-cols-1 md:grid-cols-2 md:gap-6">
                     <div>

@@ -9,7 +9,7 @@ const Home = () => {
         <main className="mx-auto bg-white">
             <Main />
             <AboutDetail />
-            <section className="sm:container-full md:container">
+            <section className="sm:mx-4 md:mx-12">
                 <Career />
                 <Feature />
             </section>

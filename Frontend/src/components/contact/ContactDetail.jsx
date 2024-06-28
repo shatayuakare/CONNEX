@@ -9,7 +9,7 @@ const ContactDetail = () => {
             {
                 contactDetail.map((elem, idx) => {
                     return (
-                        <div className="card  text-center" key={idx}>
+                        <div className="card text-center" key={idx}>
                             <div className="card-body" >
                                 <span className="text-green-500 text-5xl">
                                     <i className={elem.icon}></i>

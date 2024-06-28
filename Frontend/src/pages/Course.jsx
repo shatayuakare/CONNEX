@@ -18,7 +18,6 @@ const Course = () => {
                     Choose Our <span>Top Courses</span>
                 </ContentHeading>
                 <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 md:gap-6 text-black  mx-auto ">
-
                     {
                         Courses.slice(0, items).map((elem, idx) => {
                             return (
@@ -34,7 +33,7 @@ const Course = () => {
                                             {elem.description}
                                         </p>
                                         <div className="card-actions justify-start">
-                                            <a href={elem.url} className="btn bg-green-300 text-black hover:bg-green-400">Buy Now</a>
+                                            <a href={elem.url} target="_block" className="btn bg-green-300 text-black hover:bg-green-400">Buy Now</a>
                                         </div>
                                     </div>
                                 </div>

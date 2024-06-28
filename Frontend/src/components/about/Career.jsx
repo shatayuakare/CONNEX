@@ -23,7 +23,7 @@ const Career = () => {
                         </span>
                     </figure>
                     <div className="card-body sm:p-4 md:p-6">
-                        <h2 className="card-title">Our Mission</h2>
+                        <h2 className="card-title">Our Vision</h2>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae est libero, veritatis rerum quae minima.</p>
 
                     </div>

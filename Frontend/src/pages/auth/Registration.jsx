@@ -23,39 +23,32 @@ const Registration = () => {
             password: data.password
         }
 
-        await axios.post("https://codersocietyserver.onrender.com/auth/register",
-            userInfo).then((res) => {
-                if (res.data) {
-                    toast.success("User Registered Successfully")
-                }
-                localStorage.setItem("User", JSON.stringify(res.data.user))
-            }).catch((err) => {
-                toast.error(err.response.data.message)
-            })
-
         await axios.post("https://codersocietyserver.onrender.com/auth/register", userInfo).then((res) => {
             if (res.data) {
                 toast.success("User Registered Successfully")
             }
             localStorage.setItem("User", JSON.stringify(res.data.user))
+            toast.success("New Account Created");
+            setInterval(() => {
+                window.location.reload();
+            }, 3000);
         }).catch((err) => {
             toast.error(err.response.data.message)
         })
-        window.location.reload();
     };
 
 
     return (
         <>
             <PageHead title={'Register '} msg={'Registeration Form'} />
-            <section className="container content-center my-5" id="register">
+            <section className="content-center py-5 bg-gray-100" id="register">
 
-                <div className="shadow-md p-4 pt-8 md:w-6/12 mx-auto bg-white rounded-lg" action="" >
-                    <h4 className="text-center text-3xl p-3 pb-0 font-bold">
+                <div className="shadow-md p-4 md:w-6/12 mx-auto bg-white rounded-2xl" action="" >
+                    <h4 className="text-center text-3xl pb-0 mt-2 font-bold">
                         Create A New Account
                     </h4>
 
-                    <form className="p-4" action="" onSubmit={handleSubmit(onSubmit)}>
+                    <form className="px-4" action="" onSubmit={handleSubmit(onSubmit)}>
                         <label htmlFor="username">Username</label>
                         <input
                             type="text" id="username"
@@ -120,11 +113,11 @@ const Registration = () => {
                             {errors.password && <span>{errors.password.message}</span>}
                         </div>
 
-                        <button type="submit" className="btn mx-auto bg-green-500 text-white hover:bg-green-600 hover:shadow px-6 text-xl mt-8">
+                        <button type="submit" className="btn mx-auto bg-green-500 text-white hover:bg-green-600 hover:shadow px-6 text-xl mt-2">
                             Register
                         </button>
 
-                        <div className="text-center text-xl pt-5 text-gray-600">
+                        <div className="text-center text-xl pt-2 text-gray-600">
                             Already have an account?
                             <Link className="text-green-500" to={'/login'}> Login</Link>
                         </div>

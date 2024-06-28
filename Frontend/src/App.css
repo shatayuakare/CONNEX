@@ -16,7 +16,7 @@ section {
 
 label {
     display: block;
-    margin-top: 2rem !important;
+    margin-top: 1rem !important;
     font-size: large;
     color: green;
     margin-bottom: 4px;
@@ -40,7 +40,7 @@ label::after {
 
 input,
 textarea {
-    padding: .8rem !important;
+    padding: .6rem !important;
     width: 100%;
     font-size: 1.3rem !important;
     border-radius: 15px;
@@ -67,12 +67,14 @@ textarea:focus {
 }
 
 .btn {
+    height: auto !important;
     font-weight: bolder;
     border: none;
     transition-duration: .5s !important;
     display: flex !important;
     align-items: center !important;
 }
+
 
 
 .btn-main {
@@ -119,12 +121,13 @@ textarea:focus {
 
 
 .container {
-    width: 88% !important;
+    /* min-width: 88% !important; */
     margin: auto;
+    padding: 0 2rem;
 }
 
 .container-full {
-    width: 100% !important;
+    min-width: 100% !important;
 }
 
 /* Header styling */
@@ -138,7 +141,7 @@ header .logo {
 
 /* Home Styling */
 section#home-main {
-    min-height: 80vh !important;
+    min-height: 100vh !important;
     user-select: none;
     /* background-color: #007FFF; */
 }
@@ -150,7 +153,28 @@ section#home-main {
     /* font-family: "Permanent Marker"; */
 }
 
+
+
+
+
+
+/* ---------Dashboard---------- */
+/* section#dashboard {
+    margin-top: 10vh;
+    min-height: 90vh !important;
+} */
+
+#dashboard .innerdashboard {
+    min-height: 75vh;
+}
+
+#dashboard .innerdashboard label {
+    margin-top: 1rem !important;
+}
+
 @media only screen and (max-width: 700px) {
+
+
     section#home-main {
         display: flex;
         align-items: center !important;

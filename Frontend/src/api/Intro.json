@@ -1,0 +1,39 @@
+[
+    {
+        "name":"Anish Bankar",
+        "profession":"Developer",
+        "message":"The best way to predict the future is to invent it.",
+        "rate":"4.5"
+    },
+    {
+        "name":"James feroundo",
+        "profession":"Content writter",
+        "message":"Code is like humor. When you have to explain it, its bad.",
+        "rate":"4"
+    },
+    {
+        "name":"Alex Clayton",
+        "profession":"graphics designer",
+        "message":"Programming is the art of telling a computer what to do.",
+        "rate":"4.5"
+    },
+    {
+        "name":"Jeremy Ferrer",
+        "profession":"Web designer",
+        "message":"Software is a great combination of artistry and engineering.",
+        "rate":"3.5"
+
+    },
+    {
+        "name":"Julia wilson",
+        "profession":"Manager",
+        "message":"The best software is written by teams who know how to work together.",
+        "rate":"4"
+    },
+    {
+        "name":"Patrick  Hopper",
+        "profession":"tester",
+        "message":"Programming is not about typing, its about thinking.",
+        "rate":"4.5"
+    }
+]

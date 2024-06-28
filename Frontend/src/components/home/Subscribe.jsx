@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 
 const Subscribe = () => {
@@ -11,9 +12,9 @@ const Subscribe = () => {
                 <form className="sm-w-full md:w-10/12 mx-auto" action="">
                     <span className="input input-bordered border-4 py-6 p-4  rounded-full  pe-0 flex bg-white items-center gap-2 hover:border-green-500 duration-200">
                         <input type="email" className="grow  " placeholder="Enter your email address" />
-                        <button className="btn bg-white  hover:text-white hover:bg-green-500 duration-300 text-green-500 rounded-full">
+                        <Link to={"/register"} className="btn bg-white  hover:text-white hover:bg-green-500 duration-300 text-green-500 rounded-full">
                             <i className='bx p-1 bxl-telegram text-3xl'></i>
-                        </button>
+                        </Link>
                     </span>
                 </form>
             </div>
