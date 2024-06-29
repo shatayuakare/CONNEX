@@ -13,6 +13,7 @@ import Registration from './pages/auth/Registration'
 
 
 //pages
+import Error from './pages/Error'
 import Home from './pages/Home'
 import About from './pages/About'
 import Contact from './pages/Contact'
@@ -25,8 +26,6 @@ import Account from './pages/dashboard/Account'
 import DoubtQue from './pages/dashboard/DoubtQue'
 import Setting from './pages/dashboard/Setting'
 
-
-
 function App() {
 
   const [authUser, setAuthUser] = useAuth();
@@ -37,6 +36,7 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
+          <Route path={'/*'} element={<Error />} />
           <Route path={"/"} element={<Home />} />
           <Route path={"/about"} element={<About />} />
           <Route path={"/course"} element={<Course />} />
