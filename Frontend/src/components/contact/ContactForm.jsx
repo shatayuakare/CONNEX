@@ -19,7 +19,7 @@ const ContactForm = () => {
             message: data.message
         }
 
-        await axios.post("http://localhost:4001/contact", contactData).then((res) => {
+        await axios.post("https://codersocietyserver.onrender.com/contact", contactData).then((res) => {
             console.log(res.data)
             toast.success("Message Send");
 
