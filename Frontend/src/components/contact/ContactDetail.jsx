@@ -11,7 +11,7 @@ const ContactDetail = () => {
                     return (
                         <div className="card text-center" key={idx}>
                             <div className="card-body" >
-                                <span className="text-green-500 text-5xl">
+                                <span className="text-violet-600 text-5xl">
                                     <i className={elem.icon}></i>
                                 </span>
                                 <h5 className="text-2xl font-semibold">

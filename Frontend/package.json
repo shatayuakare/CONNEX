@@ -1,5 +1,5 @@
 {
-  "name": "coder-society",
+  "name": "connex",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -17,6 +17,7 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.52.0",
     "react-hot-toast": "^2.4.1",
+    "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.23.1",
     "tailwindcss": "^3.4.4"
   },

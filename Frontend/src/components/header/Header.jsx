@@ -71,7 +71,7 @@ const Header = () => {
                                 }
                             </ul>
                         </div>
-                        <Link to={"/"} className="btn btn-sm btn-ghost px-0 text-blue-900 font-bold sm:ms-0d uppercase md:ms-3 text-3xl ">
+                        <Link to={"/"} className="btn btn-sm btn-ghost px-0 text-violet-800 font-extrabold sm:ms-0d uppercase md:ms-3 text-3xl ">
                             {/* <img className="w-10" src="./logo.png" alt="" /> */}
                             Connex
                         </Link>
@@ -105,7 +105,7 @@ const Header = () => {
                                     {userName}
                                     <i className='bx bxs-chevron-down text-lg py-0 ms-1' ></i>
                                 </div>
-                                <ul tabIndex={0} className="dropdown-content menu bg-white text-gray-700 rounded-box z-[1] w-52 mt-3  p-2 shadow">
+                                <ul tabIndex={0} className="dropdown-content menu bg-white text-gray-700 rounded-box z-[1] w-52 mt-5  p-2 shadow">
                                     <li>
                                         <Link to={'/dashboard'}>Dashboard</Link>
                                     </li>
@@ -115,8 +115,8 @@ const Header = () => {
                                     <li>
                                         <Link to={'/dashboard/setting'}>Setting</Link>
                                     </li>
-                                    <li className="text-center">
-                                        <Link to={'./'} className="text-center"
+                                    <li className="text-center ">
+                                        <Link to={'/'} className="text-center bg-violet-400 text-white font-bold"
                                             onClick={logOut}>
                                             Logout
                                         </Link>
@@ -124,7 +124,7 @@ const Header = () => {
                                 </ul>
                             </div>
                                 :
-                                <Link to={'/login'} className="btn btn-sm bg-blue-600 rounded-lg px-8 py-3 text-white hover:bg-blue-800 hover:skew-y-6">
+                                <Link to={'/login'} className="btn btn-sm bg-violet-600 rounded-lg px-8 py-3 text-white hover:bg-blue-800 hover:skew-y-6">
                                     Log In
                                 </Link>
                         }

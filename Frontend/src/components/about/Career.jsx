@@ -18,7 +18,7 @@ const Career = () => {
 
                 <div className="card card-side duration-300 shadow hover:border-l-4 hover:border-blue-500 bg-white">
                     <figure className="sm:w-60 md:w-48">
-                        <span className="ms-4 h-fit text-green-700">
+                        <span className="ms-4 h-fit text-violet-700">
                             <i className='bx bx-medal rounded-full  text-3xl  p-4 py-3 bg-blue-100'></i>
                         </span>
                     </figure>
@@ -30,7 +30,7 @@ const Career = () => {
                 </div>
                 <div className="card card-side duration-300 shadow hover:border-l-4 hover:border-blue-500 mt-4 bg-white">
                     <figure className="sm:w-60 md:w-48">
-                        <span className="ms-4 h-fit text-yellow-500">
+                        <span className="ms-4 h-fit text-orange-500">
                             <i className='bx bxs-bulb rounded-full  text-3xl  p-4 py-3 bg-blue-100'></i>
                         </span>
                     </figure>
@@ -41,7 +41,7 @@ const Career = () => {
                     </div>
                 </div>
 
-                <button className="btn bg-green-500 text-white hover:bg-green-600 mt-8">
+                <button className="btn btn-normal mt-8">
                     Discover More
                 </button>
             </div>

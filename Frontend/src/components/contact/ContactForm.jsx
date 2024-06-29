@@ -63,7 +63,7 @@ const ContactForm = () => {
                     {errors.message && <span>{errors.message.message}</span>}
                 </div>
 
-                <button className="btn mx-auto bg-green-500 text-white hover:bg-green-600 hover:shadow px-6 text-xl mt-8">
+                <button className="btn mx-auto btn-normal hover:shadow px-6 text-xl mt-8">
                     Send Message
                 </button>
 

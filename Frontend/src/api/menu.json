@@ -14,13 +14,5 @@
     {
         "path": "/course",
         "name": "Course"
-    },
-    {
-        "path": "/doubt",
-        "name": "Doubt"
-    },
-    {
-        "path": "/dashboard",
-        "name": "Dashboard"
     }
 ]

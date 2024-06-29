@@ -2,30 +2,35 @@
     {
         "icon": "bx bxl-facebook",
         "color": "text-blue-500",
+        "bordercolor": "border-blue-500",
         "name": "Facebook",
         "url": "https://facebook.com/"
     },
     {
         "icon": "bx bxl-whatsapp",
         "color": "text-green-500",
+        "bordercolor": "border-green-400",
         "name": "Whatsapp",
         "url": "https://chat.whatsapp.com/F3ibbBAILn10RfT36gIA1R"
     },
     {
         "icon": "bx bxl-gmail",
-        "color": "text-Red-300",
+        "color": "text-red-500",
+        "bordercolor": "border-red-500",
         "name": "Gmail",
         "url": "https://gmail.com/"
     },
     {
         "icon": "bx bxl-linkedin",
         "color": "text-blue-500",
+        "bordercolor": "border-blue-400",
         "name": "Linkedin",
         "url": "https://linkedin.com/"
     },
     {
         "icon": "bx bxl-telegram",
         "color": "text-blue-500",
+        "bordercolor": "border-blue-500",
         "name": "Telegram",
         "url": "https://t.me/smartcodersociety/"
     }

@@ -10,7 +10,7 @@ const shareModel = () => {
     }
     return (
         <>
-            <dialog id="shareModal" className="modal modal-bottom sm:modal-middle">
+            <dialog id="shareModal" className="modal modal-bottom backdrop-blur sm:modal-middle">
                 <div className="modal-box bg-white text-center">
 
                     <form method="dialog">
@@ -47,7 +47,7 @@ const shareModel = () => {
                         {
                             socialMedia.map((elem, idx) => {
                                 return (
-                                    <a className={`${elem.color} link p-2.5 py-1.5 border-2 rounded-full text-xl`} href={elem.url} key={idx}>
+                                    <a className={`${elem.color} link p-2.5 py-1.5 border-2 ${elem.bordercolor}  rounded-full text-xl`} href={elem.url} key={idx}>
                                         <i className={elem.icon}></i>
                                     </a>
                                 )

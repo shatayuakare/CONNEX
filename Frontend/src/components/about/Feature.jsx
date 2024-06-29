@@ -19,10 +19,10 @@ const Feature = () => {
                 {
                     features.slice(0, item).map((elem, idx) => {
                         return (
-                            <div className="card shadow hover:shadow-xl p-2 rounded-none bg-transparent hover:bg-white text-gray-600" key={idx}>
+                            <div className="card shadow hover:shadow-xl p-2 rounded-none bg-transparent hover:bg-white text-neutral-600" key={idx}>
                                 <div className="card-body">
                                     <h2 className="card-title capitalize">
-                                        <span className={`${elem.color} text-green-700 p-2 px-3 rounded-full`}>
+                                        <span className={`${elem.color} text-violet-600 p-2 px-3 rounded-full`}>
                                             <i className={`${elem.icon} text-4xl`}></i>
                                         </span>
                                         {elem.title}
@@ -38,7 +38,7 @@ const Feature = () => {
                 }
             </div>
             <div className="text-center p-3  my-5">
-                <button className="btn bg-green-500 text-white hover:bg-green-600 px-4 mx-auto"
+                <button className="btn btn-normal mx-auto"
                     onClick={increaseItem}>
                     Load More
                 </button>

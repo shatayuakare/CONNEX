@@ -45,7 +45,7 @@ const Course = () => {
 
                 </div>
                 <div className="text-center p-3  my-5">
-                    <button className="btn bg-green-500 text-white hover:bg-green-600 px-4 mx-auto"
+                    <button className="btn btn-normal px-4 mx-auto"
                         onClick={increaseItems}>
                         Load More
                     </button>
