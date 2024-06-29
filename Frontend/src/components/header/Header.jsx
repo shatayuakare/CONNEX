@@ -124,29 +124,11 @@ const Header = () => {
                                 </ul>
                             </div>
                                 :
-                                <Link to={'/login'} className="btn btn-sm bg-violet-600 rounded-lg px-8 py-3 text-white hover:bg-blue-800 hover:skew-y-6">
+                                <Link to={'/login'} className="btn btn-sm bg-violet-600 rounded-lg px-8 py-3 text-white hover:bg-violet-800 hover:skew-y-6">
                                     Log In
                                 </Link>
                         }
                     </div>
-
-                    {/* <div className="dropdown dropdown-end md:shrink-0 md:hidden sm:flex">
-                        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                            <div className="w-10 rounded-full">
-                                <i className='bx bx-user text-3xl text-white' ></i>
-                            </div>
-                        </div>
-                        <ul
-                            tabIndex={0}
-                            className="menu menu-sm dropdown-content rounded-box z-[1] mt-5 w-52 p-2 shadow bg-white">
-                            <li>
-                                <Link to={'/login'}>Login</Link>
-                            </li>
-                            <li>
-                                <Link to={'/register'}>Register</Link>
-                            </li>
-                        </ul>
-                    </div> */}
                 </div>
             </header>
             <ShareModel />

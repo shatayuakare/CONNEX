@@ -24,14 +24,10 @@ const Registration = () => {
         }
 
         await axios.post("https://codersocietyserver.onrender.com/auth/register", userInfo).then((res) => {
-            if (res.data) {
-                toast.success("User Registered Successfully")
-            }
-            localStorage.setItem("User", JSON.stringify(res.data.user))
+
             toast.success("New Account Created");
-            setInterval(() => {
-                window.location.reload();
-            }, 3000);
+            localStorage.setItem("User", JSON.stringify(res.data.user))
+            window.location.reload();
         }).catch((err) => {
             toast.error(err.response.data.message)
         })

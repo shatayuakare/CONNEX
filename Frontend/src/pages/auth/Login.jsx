@@ -4,6 +4,7 @@ import { Link } from "react-router-dom"
 import PageHead from "../../components/PageHead"
 import axios from "axios";
 import toast from "react-hot-toast";
+import Loading from "../../components/Loading";
 
 const Login = () => {
     const [type, setType] = useState("password");
@@ -22,19 +23,16 @@ const Login = () => {
             email: data.email,
             password: data.password
         }
+
         setLoading(true);
         await axios.post("https://codersocietyserver.onrender.com/auth/login", userInfo).then((res) => {
             console.log(res.data)
-            setLoading(false)
-            if (res.data) {
-                toast.success("Login Successfully");
-            }
+            setLoading(false);
+            toast.success("Login Successfully");
             localStorage.setItem("User", JSON.stringify(res.data.user))
             window.location.reload();
         }).catch((err) => {
-            if (err.response) {
-                toast.error(err.response.data.message)
-            }
+            toast.error(err.response.data.message)
         })
     };
 
@@ -42,7 +40,6 @@ const Login = () => {
         <>
             <PageHead title="Login" msg={"Login form"} />
             <section className="content-center p-1 bg-gray-100" id="login">
-
                 <div className="shadow md:p-4 sm:p-2 pt-8 sm-w-full md:w-6/12 mx-auto bg-white rounded-2xl" action="" >
                     <h4 className="text-center text-3xl p-3 pb-0 font-bold">
                         Already A Member? Sign In
@@ -97,6 +94,7 @@ const Login = () => {
                     </form>
                 </div>
             </section>
+            <Loading show={loading} />
         </>
     )
 }

@@ -2,7 +2,8 @@ import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 import cors from "cors"
-import userRoute from "./route/user.router.js"
+import userRoute from "./route/user.route.js"
+import contactRoute from "./route/contact.route.js"
 import serverless from "serverless-http";
 
 const app = express();
@@ -26,7 +27,7 @@ try {
 }
 
 export const handler = serverless(app);
-// app.use("/try", (req, res) => res.send("Hellow"))
 
 app.use("/auth", userRoute)
+app.use("", contactRoute)
 app.listen(PORT)

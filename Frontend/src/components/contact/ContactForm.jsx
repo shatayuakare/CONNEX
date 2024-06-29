@@ -1,5 +1,6 @@
-import { useForm } from "react-hook-form"
 import toast from "react-hot-toast"
+import axios from "axios";
+import { useForm } from "react-hook-form"
 
 
 const ContactForm = () => {
@@ -7,14 +8,28 @@ const ContactForm = () => {
         register,
         handleSubmit,
         formState: { errors },
-    } = useForm()
-    const onSubmit = (data) => {
-        toast.success("Send Message");
-        console.log(data)
-        setInterval(() => {
-            window.location.reload()
-        }, 3000);
-    }
+    } = useForm();
+
+
+    const onSubmit = async (data) => {
+        const contactData = {
+            name: data.name,
+            email: data.email,
+            subject: data.subject,
+            message: data.message
+        }
+
+        await axios.post("http://localhost:4001/contact", contactData).then((res) => {
+            console.log(res.data)
+            toast.success("Message Send");
+
+            setTimeout(() => {
+                window.location.reload();
+            }, 3000);
+        }).catch((err) => {
+            toast.error(err.response.data.message)
+        })
+    };
 
     return (
         <div className="p-5 bg-white shadow-md ">
