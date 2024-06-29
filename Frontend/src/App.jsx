@@ -1,10 +1,12 @@
 import './App.css'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { useState } from 'react'
 import { Toaster } from "react-hot-toast"
 
 // Components 
 import Header from './components/header/Header'
 import Footer from './components/Footer'
+import Loading from './components/Loading'
 
 // Authentication
 import { useAuth } from './context/AuthProvider'
@@ -28,36 +30,43 @@ import Setting from './pages/dashboard/Setting'
 
 function App() {
 
+  const [loading, setLoading] = useState(false);
   const [authUser, setAuthUser] = useAuth();
   setAuthUser(authUser)
 
-  return (
-    <>
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path={'/*'} element={<Error />} />
-          <Route path={"/"} element={<Home />} />
-          <Route path={"/about"} element={<About />} />
-          <Route path={"/course"} element={<Course />} />
-          <Route path={"/contact"} element={<Contact />} />
-          <Route path={"/profile"} element={authUser ? <Profile /> : <Navigate to={'/register'} />} />
-          <Route path={"/login"} element={!authUser ? <Login /> : <Navigate to={'/'} />} />
-          <Route path={"/register"} element={!authUser ? <Registration /> : <Navigate to={'/'} />} />
 
-          <Route path={"/dashboard"}
-            element={authUser ? <Dashboard />
-              : <Navigate to={'/register'} />} >
-            <Route path='' element={<InnerDashboard />} />
-            <Route path='account' element={<Account />} />
-            <Route path='doubt' element={<DoubtQue />} />
-            <Route path='setting' element={<Setting />} />
-          </Route>
-        </Routes>
-        <Footer />
-        <Toaster />
-      </BrowserRouter>
-    </>
+
+
+  return (
+    <BrowserRouter>
+      <Header />
+      {
+        loading ?
+          <Loading show={loading} />
+          :
+          <Routes>
+            <Route path={'/*'} element={<Error />} />
+            <Route path={"/"} element={<Home />} />
+            <Route path={"/about"} element={<About />} />
+            <Route path={"/course"} element={<Course />} />
+            <Route path={"/contact"} element={<Contact />} />
+            <Route path={"/profile"} element={authUser ? <Profile /> : <Navigate to={'/register'} />} />
+            <Route path={"/login"} element={!authUser ? <Login /> : <Navigate to={'/'} />} />
+            <Route path={"/register"} element={!authUser ? <Registration /> : <Navigate to={'/'} />} />
+
+            <Route path={"/dashboard"}
+              element={authUser ? <Dashboard />
+                : <Navigate to={'/register'} />} >
+              <Route path='' element={<InnerDashboard />} />
+              <Route path='account' element={<Account />} />
+              <Route path='doubt' element={<DoubtQue />} />
+              <Route path='setting' element={<Setting />} />
+            </Route>
+          </Routes>
+      }
+      <Footer />
+      <Toaster />
+    </BrowserRouter>
   )
 }
 

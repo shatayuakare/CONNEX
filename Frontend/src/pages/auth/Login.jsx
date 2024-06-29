@@ -7,6 +7,9 @@ import toast from "react-hot-toast";
 
 const Login = () => {
     const [type, setType] = useState("password");
+
+    const [loading, setLoading] = useState(false);
+
     const {
         register,
         handleSubmit,
@@ -19,9 +22,10 @@ const Login = () => {
             email: data.email,
             password: data.password
         }
-
+        setLoading(true);
         await axios.post("https://codersocietyserver.onrender.com/auth/login", userInfo).then((res) => {
-            // console.log(res.data)
+            console.log(res.data)
+            setLoading(false)
             if (res.data) {
                 toast.success("Login Successfully");
             }
@@ -90,12 +94,9 @@ const Login = () => {
                             Don't have an account?
                             <Link className="text-green-500" to={'/register'}> Register Now</Link>
                         </div>
-
                     </form>
-
-                </div >
-
-            </section >
+                </div>
+            </section>
         </>
     )
 }
