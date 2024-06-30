@@ -79,9 +79,9 @@ const Header = () => {
 
 
                     <div className="navbar-center hidden lg:flex">
-                        <div className="input input-bordered flex items-center gap-2 bg-transparent w-100 shadow">
+                        <div className="input input-sm border py-5 border-violet-500 flex items-center gap-2 bg-transparent w-full">
+                            <i className='bx bx-search-alt text-xl font-bold opacity-70' ></i>
                             <input type="text" className="grow" placeholder="Search" />
-                            <i className='bx bx-search-alt h-5 w-5 opacity-70' ></i>
                         </div>
                     </div>
 

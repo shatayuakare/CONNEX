@@ -13,7 +13,7 @@ const Course = () => {
     return (
         <>
             <PageHead title={'Course'} msg="All course" />
-            <section className="container mt-5">
+            <section className="md:mx-14 sm:mx-4 mt-5">
                 <ContentHeading title={"POPULAR COURSES"} >
                     Choose Our <span>Top Courses</span>
                 </ContentHeading>

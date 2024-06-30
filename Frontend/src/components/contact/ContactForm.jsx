@@ -1,9 +1,12 @@
 import toast from "react-hot-toast"
 import axios from "axios";
 import { useForm } from "react-hook-form"
+import { useState } from "react";
 
 
 const ContactForm = () => {
+
+    const [loading, setLoading] = useState(false);
     const {
         register,
         handleSubmit,
@@ -19,14 +22,17 @@ const ContactForm = () => {
             message: data.message
         }
 
+        setLoading(true)
         await axios.post("https://codersocietyserver.onrender.com/contact", contactData).then((res) => {
+            setLoading(false)
             console.log(res.data)
             toast.success("Message Send");
 
             setTimeout(() => {
                 window.location.reload();
-            }, 3000);
+            }, 2000);
         }).catch((err) => {
+            setLoading(false)
             toast.error(err.response.data.message)
         })
     };
@@ -79,12 +85,13 @@ const ContactForm = () => {
                 </div>
 
                 <button className="btn mx-auto btn-normal hover:shadow px-6 text-xl mt-8">
+                    {
+                        loading && <span className="loading loading-spinner"></span>
+                    }
                     Send Message
                 </button>
-
-
-            </form >
-        </div >
+            </form>
+        </div>
     )
 }
 
