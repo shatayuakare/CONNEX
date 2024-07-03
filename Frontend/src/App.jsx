@@ -27,15 +27,13 @@ import InnerDashboard from './pages/dashboard/InnerDashboard'
 import Account from './pages/dashboard/Account'
 import DoubtQue from './pages/dashboard/DoubtQue'
 import Setting from './pages/dashboard/Setting'
+import Construct from './pages/Construct'
 
 function App() {
 
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState();
   const [authUser, setAuthUser] = useAuth();
   setAuthUser(authUser)
-
-
-
 
   return (
     <BrowserRouter>
@@ -46,6 +44,7 @@ function App() {
           :
           <Routes>
             <Route path={'/*'} element={<Error />} />
+            <Route path={'/construction'} element={<Construct />} />
             <Route path={"/"} element={<Home />} />
             <Route path={"/about"} element={<About />} />
             <Route path={"/course"} element={<Course />} />

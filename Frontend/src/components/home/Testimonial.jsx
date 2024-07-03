@@ -13,11 +13,8 @@ const Testimonial = () => {
                 What Says <span className="underline">Our Students</span>
             </ContentHeading>
 
-
             <div className="mx-auto md:w-11/12 overflow-hidden rounded-3xl">
-
-                <div className={`carousel carousel-center space-x-6 max-w-full  p-6 text-neutral-500`}>
-
+                <div className={`carousel carousel-center space-x-6 max-w-full p-6 text-neutral-500`}>
                     {
                         testimonial.map((elem, idx) => {
                             return (

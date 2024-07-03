@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom"
 import axios from "axios";
 import toast from "react-hot-toast";
-import Loading from "../../components/Loading";
 
 const Login = () => {
     const [type, setType] = useState("password");

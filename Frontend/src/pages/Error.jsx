@@ -17,7 +17,7 @@ const Error = () => {
                     The page your looking for might have been removed had its name changed or is temparary unavailabe.
                 </p>
 
-                <Link to={'./'} className="btn w-fit px-9 bg-violet-700 text-white hover:bg-violet-900 duration-300  mx-auto">
+                <Link to={'/'} className="btn w-fit px-9 bg-violet-700 text-white hover:bg-violet-900 duration-300  mx-auto">
                     Go to Home Page
                 </Link>
             </div>

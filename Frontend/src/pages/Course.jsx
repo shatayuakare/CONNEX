@@ -33,7 +33,7 @@ const Course = () => {
                                             {elem.description}
                                         </p>
                                         <div className="card-actions justify-start">
-                                            <a href={elem.url} target="_block" className="btn bg-green-300 text-black hover:bg-green-400">Buy Now</a>
+                                            <a href={elem.url} target="_block" className="btn btn-normal">Buy Now</a>
                                         </div>
                                     </div>
                                 </div>

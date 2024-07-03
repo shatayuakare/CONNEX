@@ -10,7 +10,7 @@ const Footer = () => {
                         {/* <img className="w-10" src="./logo.png" alt="" /> */}
                         Connex
                     </Link>
-                    <p>ACME Industries Ltd.<br />Providing reliable tech since 1992</p>
+                    <p>Smart Coder Society <br />Providing reliable tech since 1992</p>
                 </aside>
                 <nav>
                     <h6 className="footer-title">Services</h6>

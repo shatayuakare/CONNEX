@@ -21,9 +21,9 @@ const Account = () => {
     const onSubmit = (data) => console.log(data);
     return (
         <div>
-            <form action="" className="grid grid-cols-2 gap-6" onSubmit={handleSubmit(onSubmit)}>
+            <form action="" className="grid sm:grid-cols-1 md:grid-cols-2 sm:gap-4 md:gap-6" onSubmit={handleSubmit(onSubmit)}>
 
-                <div className="p-4 bg-white rounded-2xl">
+                <div className="sm:p-2 mdp-4 bg-white rounded-2xl">
                     <div className="card ">
                         <figure className="bg-blue-50 h-40 ">
                             <img className="h-24 w-24 mt-16 z-10"

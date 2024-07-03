@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import ContentHeading from "../ContentHeading"
 
 const Career = () => {
@@ -41,9 +42,9 @@ const Career = () => {
                     </div>
                 </div>
 
-                <button className="btn btn-normal mt-8">
+                <Link to={'/construction'} className="btn btn-normal mt-8">
                     Discover More
-                </button>
+                </Link>
             </div>
         </div>
 

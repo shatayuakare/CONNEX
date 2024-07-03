@@ -33,8 +33,8 @@ const Dashboard = () => {
     return (
         <section className="pt-16" id="dashboard">
 
-            <div className="flex sticky top-0 left-0">
-                <div className="w-1/4 md:p-6">
+            <div className="flex md:flex-row sticky top-0 left-0 sm:h-fit sm:flex-col">
+                <div className="sm:w-100 md:w-1/4 md:p-6 pb-2" >
                     <div className="text-center uppercase">
                         <img className="w-48 h-48 mx-auto border-2 border-double border-black rounded-full"
                             src="https://cdn-icons-png.flaticon.com/512/219/219983.png" alt="" />
@@ -61,7 +61,7 @@ const Dashboard = () => {
                     </ul>
                 </div>
 
-                <div className="w-3/4 pe-6">
+                <div className="sm:w-full md:w-3/4 md:pe-6 p-4">
                     <div className="p-4 bg-white">
                         <div className="text-2xl font-bold">
                             {authUser.name}
@@ -71,7 +71,7 @@ const Dashboard = () => {
                         </div>
                     </div>
 
-                    <div className="bg-[url('https://t3.ftcdn.net/jpg/03/24/13/18/360_F_324131827_oo4WRejOZSG4wgAttOOns3TfLXWfw81a.jpg')] bg-cover bg-center p-8 rounded-3xl w-full innerdashboard" >
+                    <div className="bg-[url('https://t3.ftcdn.net/jpg/03/24/13/18/360_F_324131827_oo4WRejOZSG4wgAttOOns3TfLXWfw81a.jpg')] bg-cover bg-center md:p-8 sm:p-4 rounded-3xl w-full innerdashboard" >
 
                         <Outlet />
 

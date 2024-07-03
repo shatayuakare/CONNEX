@@ -11,14 +11,14 @@ const Setting = () => {
     setAuthUser(authUser);
 
     return (
-        <div className="w-1/2 bg-white p-3 px-6 rounded-2xl mx-auto">
+        <div className="md:w-1/2 sm:w-full bg-white p-3 md:px-6 rounded-2xl mx-auto">
             <form action="" className="">
                 <h4 className="text-2xl text-center font-bold">
                     Change Password
                 </h4>
 
                 <label htmlFor="email">Email address</label>
-                <input type="email" name="email" id="email"
+                <input className="text-gray-600" type="email" name="email" id="email"
                     placeholder="Email address"
                     value={authUser.email}
                     disabled={true}

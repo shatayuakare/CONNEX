@@ -37,7 +37,6 @@ const Registration = () => {
 
     return (
         <section className="content-center py-5 bg-gray-100" id="register">
-
             <div className="shadow-md p-4 md:w-6/12 mx-auto bg-white rounded-2xl" action="" >
                 <h4 className="text-center text-3xl pb-0 mt-2 font-bold">
                     Create A New Account
