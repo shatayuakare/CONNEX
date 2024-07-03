@@ -6,7 +6,6 @@ import toast from "react-hot-toast";
 
 const Login = () => {
     const [type, setType] = useState("password");
-
     const [loading, setLoading] = useState(false);
 
     const {
