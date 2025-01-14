@@ -12,10 +12,12 @@ const Home = () => {
             <AboutDetail />
             <section className="sm:mx-4 md:mx-12">
                 <Career />
+            </section>
+            <Testimonial />
+            <section className="sm:mx-4 md:mx-12">
                 <Feature />
             </section>
             <Subscribe />
-            <Testimonial />
         </main>
     )
 }

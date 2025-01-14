@@ -23,6 +23,7 @@ const Registration = () => {
         }
 
         setLoading(true);
+        // await axios.post("http://localhost:4001/auth/register", userInfo).then((res) => {
         await axios.post("https://codersocietyserver.onrender.com/auth/register", userInfo).then((res) => {
             setLoading(false);
             toast.success("New Account Created");

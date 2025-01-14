@@ -23,14 +23,14 @@ const ContactForm = () => {
         }
 
         setLoading(true)
-        await axios.post("https://codersocietyserver.onrender.com/contact", contactData).then((res) => {
+        await axios.post("https://codersocietyserver.onrender.com/contacts/new", contactData).then((res) => {
             setLoading(false)
             console.log(res.data)
             toast.success("Message Send");
 
             setTimeout(() => {
                 window.location.reload();
-            }, 2000);
+            }, 1000);
         }).catch((err) => {
             setLoading(false)
             toast.error(err.response.data.message)

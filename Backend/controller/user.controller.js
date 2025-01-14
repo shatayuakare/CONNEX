@@ -1,27 +1,38 @@
 import User from "../model/user.schema.js";
 import bcryptjs from "bcryptjs";
 
-// export const getUser = async (req, res) => {
-//     try {
-//         const user = await User.find()
-//         res.status(200).json(user)
-//     } catch (error) {
-//         console.log("Error ", error)
-//         res.status(500).json(error)
-//     }
-// }
+export const getUsers = async (req, res) => {
+    try {
+        const users = await User.find()
+        if (!users) return res.status(404).json({ message: 'Users not found' })
+
+        res.status(200).json(users)
+    } catch (error) {
+        res.status(500).json(error)
+    }
+}
+export const getUser = async (req, res) => {
+    try {
+        const id = req.params.id;
+        const user = await User.findOne({ _id: id })
+
+        if (!user) return res.status(404).json({ message: 'User not found' })
+        res.status(200).json(user)
+    } catch (error) {
+        console.log("Error ", error)
+        res.status(500).json(error)
+    }
+}
 
 export const register = async (req, res) => {
     try {
         const { username, name, email, password } = req.body;
         const user = await User.findOne({ email })
-        // console.log("user found", user);
         if (user) {
             return res.status(400).json({ message: "User already exist" });
         }
 
         const hashPassword = await bcryptjs.hash(password, 10)
-        console.log("Hash Password ", hashPassword);
         const createUser = new User({
             username, name, email, password: hashPassword
         })

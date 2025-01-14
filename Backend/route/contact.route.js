@@ -1,9 +1,11 @@
 import express from "express";
-import { SendMessage } from "../controller/contact.controller.js";
+import { getContact, getContacts, SendMessage } from "../controller/contact.controller.js";
 
 
-const router = express();
+const contactRoute = express();
 
-router.post("/contact", SendMessage);
+contactRoute.get("/", getContacts)
+contactRoute.get("/:id", getContact)
+contactRoute.post("/new", SendMessage);
 
-export default router;
+export default contactRoute;
